@@ -21,9 +21,5 @@ These are my personal configuration files, managed using [GNU Stow](https://www.
     ```
     ```bash
     # Add many at once
-    stow nvim zsh #other packages here
-    ```
-    ```bash
-    # Add all at once
-    stow *
+    stow nvim zsh
     ```
