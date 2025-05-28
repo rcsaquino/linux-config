@@ -17,7 +17,6 @@ These are my personal configuration files, managed using [GNU Stow](https://www.
     # Add one at a time
     stow nvim
     stow zsh
-    # Add other packages as needed
     ```
     ```bash
     # Add many at once
