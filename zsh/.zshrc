@@ -21,6 +21,7 @@ alias pdifa="comm -13 <(sort ~/factory_pkgs/factory_Qqet.txt) <(paru -Qqet | sor
 alias pdifd="comm -23 <(sort ~/factory_pkgs/factory_Qqet.txt) <(paru -Qqet | sort)"
 alias pdifat="comm -13 <(sort ~/factory_pkgs/factory_Qqe.txt) <(paru -Qqe | sort)"
 alias pdifdt="comm -23 <(sort ~/factory_pkgs/factory_Qqe.txt) <(paru -Qqe | sort)"
+alias open="xdg-open"
 alias zed="zeditor"
 alias zz="cd .."
 
