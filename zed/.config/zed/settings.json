@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "languages": {
+    "Odin": {
+      "show_edit_predictions": false
+    }
+  },
   "telemetry": {
     "metrics": false,
     "diagnostics": false
@@ -20,5 +25,6 @@
   },
 
   "autosave": { "after_delay": { "milliseconds": 500 } },
-  "terminal": { "toolbar": { "breadcrumbs": false } }
+  "terminal": { "toolbar": { "breadcrumbs": false } },
+  "restore_on_startup": "none"
 }
