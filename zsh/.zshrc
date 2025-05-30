@@ -25,6 +25,16 @@ alias open="xdg-open"
 alias zed="zeditor"
 alias zz="cd .."
 
+# ODIN HELPERS
+# function odin-tracker { xcopy "D:\My Drive\Backups\Odin\mem_tracker.odin" }
+alias odin-tracker="cp ~/dotfiles/not_dotfiles/mem_tracker.odin ."
+odinb1() { odin build $@ -o:speed -out:release -vet -strict-style -obfuscate-source-code-locations }
+odinb1u() { odin build $@ -o:speed -out:release -vet -strict-style -obfuscate-source-code-locations -disable-assert -no-bounds-check }
+odinb2() { odin build $@ -o:aggressive -out:release -vet -strict-style -obfuscate-source-code-locations }
+odinb2u() { odin build $@ -o:aggressive -out:release -vet -strict-style -obfuscate-source-code-locations -disable-assert -no-bounds-check }
+odinb3() { odin build $@ -o:aggressive -out:release -vet -strict-style -obfuscate-source-code-locations -microarch:native }
+odinb3u() { odin build $@ -o:aggressive -out:release -vet -strict-style -obfuscate-source-code-locations -disable-assert -no-bounds-check -microarch:native }
+
 # FUNCTIONS
 pdfpp() {
   rm -rf ~/Downloads/tmp_pdfpp
