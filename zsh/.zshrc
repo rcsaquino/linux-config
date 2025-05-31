@@ -1,14 +1,12 @@
 # source /usr/share/cachyos-zsh-config/cachyos-config.zsh
 
-# OH-MY-ZSH
+# ZSH THEME
 export ZSH="/usr/share/oh-my-zsh"
 ZSH_THEME="robbyrussell"
-plugins=(
-    git
-)
+plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
-# ZSH
+# ZSH PLUGINS
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -26,7 +24,6 @@ alias zed="zeditor"
 alias zz="cd .."
 
 # ODIN HELPERS
-# function odin-tracker { xcopy "D:\My Drive\Backups\Odin\mem_tracker.odin" }
 alias odin-tracker="cp ~/dotfiles/not_dotfiles/mem_tracker.odin ."
 odinb1() { odin build $@ -o:speed -out:release -vet -strict-style -obfuscate-source-code-locations }
 odinb1u() { odin build $@ -o:speed -out:release -vet -strict-style -obfuscate-source-code-locations -disable-assert -no-bounds-check }
