@@ -11,10 +11,7 @@ user_pref("zen.view.show-newtab-button-top", false);
 user_pref("zen.tab-unloader.enabled", false);
 
 // Tab Management - Pinned Tabs
-user_pref(
-  "zen.pinned-tab-manager.close-shortcut-behavior",
-  "reset-unload-switch"
-);
+user_pref("zen.pinned-tab-manager.close-shortcut-behavior", "reset-unload-switch");
 user_pref("zen.pinned-tab-manager.restore-pinned-tabs-to-pinned-url", true);
 
 // Search
