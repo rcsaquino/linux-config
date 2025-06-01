@@ -1,24 +1,26 @@
-# My Dotfiles
+# My Linux Config
 
-These are my personal configuration files, managed using [GNU Stow](https://www.gnu.org/software/stow/).
+This repo contains my personal Linux configurations—dotfiles, scripts, wallpapers, and more.
 
-## Setup
+Dotfiles are managed using [GNU Stow](https://www.gnu.org/software/stow/).
+
+## Setup dotfiles
 
 1.  Clone this repository:
     ```bash
-    git clone https://github.com/rcsaquino/dotfiles.git ~/dotfiles
+    git clone https://github.com/rcsaquino/linux-config ~/linux-config
     ```
-2.  Navigate to the cloned directory:
+2.  Navigate to the cloned dotfiles directory:
     ```bash
-    cd ~/dotfiles
+    cd ~/linux-config/dotfiles
     ```
-3.  Use Stow to symlink the desired configurations (e.g., for `nvim`, `zsh`):
+3.  Use Stow to symlink the desired configurations (e.g., for `zed`, `zsh`):
     ```bash
     # Add one at a time
-    stow nvim
+    stow zed
     stow zsh
     ```
     ```bash
     # Add many at once
-    stow nvim zsh
+    stow zed zsh
     ```
