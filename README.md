@@ -1,4 +1,4 @@
-# My Linux Config
+# My linux config
 
 This repo contains my personal Linux configurations—dotfiles, scripts, wallpapers, and more.
 
