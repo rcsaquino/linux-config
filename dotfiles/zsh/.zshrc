@@ -11,6 +11,9 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # ZOXIDE
 eval "$(zoxide init zsh)"
 
+# FZF
+source <(fzf --zsh)
+
 # ALIASES
 alias dotf="~/linux-config/install.sh"
 alias la="ls -A"
