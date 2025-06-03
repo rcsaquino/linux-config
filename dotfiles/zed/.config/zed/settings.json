@@ -19,5 +19,6 @@
   "autosave": { "after_delay": { "milliseconds": 500 } },
   "terminal": { "toolbar": { "breadcrumbs": false } },
   "restore_on_startup": "none",
-  "auto_signature_help": true
+  "auto_signature_help": true,
+  "extend_comment_on_newline": false
 }
