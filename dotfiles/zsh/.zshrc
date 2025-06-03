@@ -14,13 +14,15 @@ eval "$(zoxide init zsh)"
 # FZF
 source <(fzf --zsh)
 
-# ALIASES
+# INSTALLED/DELETED PACKAGES
+alias aqqe="comm -13 <(sort ~/factory_pkgs/factory_Qqet.txt) <(paru -Qqet | sort)"
+alias dqqe="comm -23 <(sort ~/factory_pkgs/factory_Qqet.txt) <(paru -Qqet | sort)"
+alias aqqet="comm -13 <(sort ~/factory_pkgs/factory_Qqe.txt) <(paru -Qqe | sort)"
+alias dqqet="comm -23 <(sort ~/factory_pkgs/factory_Qqe.txt) <(paru -Qqe | sort)"
+
+# QOL ALIASES
 alias dotf="~/linux-config/install.sh"
 alias la="ls -A"
-alias pdifa="comm -13 <(sort ~/factory_pkgs/factory_Qqet.txt) <(paru -Qqet | sort)"
-alias pdifd="comm -23 <(sort ~/factory_pkgs/factory_Qqet.txt) <(paru -Qqet | sort)"
-alias pdifat="comm -13 <(sort ~/factory_pkgs/factory_Qqe.txt) <(paru -Qqe | sort)"
-alias pdifdt="comm -23 <(sort ~/factory_pkgs/factory_Qqe.txt) <(paru -Qqe | sort)"
 alias open="xdg-open"
 alias zed="zeditor"
 alias zz="cd .."
