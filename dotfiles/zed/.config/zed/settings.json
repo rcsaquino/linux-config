@@ -1,4 +1,16 @@
 {
+  "agent": {
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-2.0-flash"
+    },
+    "model_parameters": [],
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-latest"
+    },
+    "version": "2"
+  },
   "languages": {
     "Odin": {
       "show_edit_predictions": false
