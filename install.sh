@@ -101,7 +101,6 @@ list_programs() {
     else
         printf "%s\n" "${linked[@]}"
     fi
-    
     echo
 
     # Display unlinked programs
@@ -113,6 +112,7 @@ list_programs() {
     else
         printf "%s\n" "${unlinked[@]}"
     fi
+    echo
 }
 
 add_dotfiles() {
