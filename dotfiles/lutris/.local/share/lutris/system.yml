@@ -1,0 +1,9 @@
+system:
+  disable_runtime: true
+  env:
+    DISPLAY: :10
+  game_path: /mnt/NVMe/Games
+  gpu: card0
+  mangohud: true
+  postexit_command: /home/rcsaquino/linux-config/scripts/lutris/post-exit.sh
+  prelaunch_command: /home/rcsaquino/linux-config/scripts/lutris/pre-launch.sh
