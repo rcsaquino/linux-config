@@ -12,28 +12,29 @@ show_usage() {
     cat << EOF
 Commands:
  add <program> <file_path>     - Move file to dotfiles and create symlink
- link <program>...             - Create symlinks for program dotfiles
- unlink <program>...           - Remove symlinks for program dotfiles  
- delete <program>...           - Delete program dotfiles directory
+ link <program/s>              - Create symlinks for program dotfiles
+ unlink <program/s>            - Remove symlinks for program dotfiles
+ delete <program/s>            - Delete program dotfiles directory
  list                          - List available programs
+
 EOF
 }
 
 link_dotfiles() {
     local program="$1"
     check_program_exists "$program"
-    
+
     while IFS= read -r -d '' file; do
         local rel_path="${file#$(program_dir "$program")/}"
         local target="$HOME/$rel_path"
-        
+
         mkdir -p "$(dirname "$target")"
-        
+
         if [[ -e "$target" && ! -L "$target" ]]; then
             read -p "File exists: $target. Backup? (y/N): " -r < /dev/tty
             [[ $REPLY =~ ^[Yy]$ ]] && mv "$target" "$target.backup"
         fi
-        
+
         ln -sf "$file" "$target"
         echo "Linked: $rel_path"
     done < <(find "$(program_dir "$program")" -type f -print0)
@@ -42,11 +43,11 @@ link_dotfiles() {
 unlink_dotfiles() {
     local program="$1"
     check_program_exists "$program"
-    
+
     while IFS= read -r -d '' file; do
         local rel_path="${file#$(program_dir "$program")/}"
         local target="$HOME/$rel_path"
-        
+
         if [[ -L "$target" && "$(readlink "$target")" == "$file" ]]; then
             rm "$target"
             echo "Unlinked: $rel_path"
@@ -57,7 +58,7 @@ unlink_dotfiles() {
 delete_dotfiles() {
     local program="$1"
     check_program_exists "$program"
-    
+
     read -p "Delete $(program_dir "$program")? (y/N): " -r < /dev/tty
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         unlink_dotfiles "$program"
@@ -78,20 +79,20 @@ is_program_linked() {
 
 list_programs() {
     [[ ! -d "$DOTFILES_DIR" ]] && { echo "No dotfiles directory found"; return 1; }
-    
+
     local linked=() unlinked=()
-    
+
     for program_path in "$DOTFILES_DIR"/*; do
         [[ -d "$program_path" ]] || continue
         local name="$(basename "$program_path")"
-        
+
         if is_program_linked "$program_path"; then
             linked+=("$name")
         else
             unlinked+=("$name")
         fi
     done
-    
+
     # Display linked programs
     echo "================"
     echo "=    Linked    ="
@@ -117,21 +118,21 @@ list_programs() {
 
 add_dotfiles() {
     local program="$1" source_path="$2"
-    
+
     # Validation
     [[ -n "$program" && -n "$source_path" ]] || error_exit "Program name and source path required"
     [[ -f "$source_path" ]] || error_exit "Source must be a regular file: $source_path"
-    
+
     source_path="$(realpath "$source_path")" || error_exit "Cannot resolve path"
     local rel_path="${source_path#$HOME/}"
     [[ "$rel_path" != "$source_path" ]] || error_exit "Source path must be within HOME directory"
-    
+
     local dest_path="$(program_dir "$program")/$rel_path"
     [[ ! -e "$dest_path" ]] || error_exit "File already exists in dotfiles: $dest_path"
-    
+
     # Execute with simple rollback on failure
     mkdir -p "$(dirname "$dest_path")" || error_exit "Cannot create destination directory"
-    
+
     if mv "$source_path" "$dest_path" && ln -s "$dest_path" "$source_path"; then
         echo "Added $program dotfile: $rel_path"
     else
