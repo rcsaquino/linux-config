@@ -21,3 +21,4 @@ user_pref("browser.search.suggest.enabled", true);
 // Others
 user_pref("full-screen-api.transition-duration.enter", "150 150");
 user_pref("full-screen-api.transition-duration.leave", "150 150");
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
