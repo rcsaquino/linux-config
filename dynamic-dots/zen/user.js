@@ -3,9 +3,12 @@ user_pref("browser.startup.page", 1);
 user_pref("browser.ctrlTab.sortByRecentlyUsed", true);
 
 // Look and Feel - Sidebar and tabs layout
-user_pref("zen.view.use-single-toolbar", false);
+user_pref("zen.view.use-single-toolbar", true);
 user_pref("zen.view.show-bottom-border", true);
 user_pref("zen.view.show-newtab-button-top", false);
+
+// Look and Feel - Zen URL Bar
+user_pref("zen.urlbar.behavior", "float");
 
 // Tab Management - Tab Unloader
 user_pref("zen.tab-unloader.enabled", false);
@@ -19,6 +22,5 @@ user_pref("browser.search.separatePrivateDefault", false);
 user_pref("browser.search.suggest.enabled", true);
 
 // Others
-user_pref("full-screen-api.transition-duration.enter", "150 150");
-user_pref("full-screen-api.transition-duration.leave", "150 150");
-user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+// user_pref("full-screen-api.transition-duration.enter", "150 150");
+// user_pref("full-screen-api.transition-duration.leave", "150 150");
