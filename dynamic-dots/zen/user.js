@@ -21,6 +21,14 @@ user_pref("zen.pinned-tab-manager.restore-pinned-tabs-to-pinned-url", true);
 user_pref("browser.search.separatePrivateDefault", false);
 user_pref("browser.search.suggest.enabled", true);
 
+// Privacy & Security - Security
+user_pref("dom.security.https_only_mode", true);
+
+// Privacy & Security - DNS over HTTPS
+user_pref("network.trr.custom_uri", "https://dns.quad9.net/dns-query");
+user_pref("network.trr.mode", 2);
+user_pref("network.trr.uri", "https://dns.quad9.net/dns-query");
+
 // Others
 // user_pref("full-screen-api.transition-duration.enter", "150 150");
 // user_pref("full-screen-api.transition-duration.leave", "150 150");
