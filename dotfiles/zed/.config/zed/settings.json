@@ -1,15 +1,21 @@
 {
+  "edit_predictions": {
+    "mode": "subtle"
+  },
   "agent": {
-    "model_parameters": [],
     "default_model": {
       "provider": "google",
-      "model": "gemini-2.0-flash"
+      "model": "gemini-2.5-flash-lite-preview"
     },
-    "version": "2"
+    "inline_assistant_model": {
+      "provider": "google",
+      "model": "gemini-2.5-flash-lite-preview"
+    },
+    "model_parameters": []
   },
   "languages": {
     "Odin": {
-      "show_edit_predictions": false
+      "show_edit_predictions": true
     }
   },
   "telemetry": {
@@ -27,6 +33,5 @@
   "autosave": { "after_delay": { "milliseconds": 500 } },
   "terminal": { "toolbar": { "breadcrumbs": false } },
   "restore_on_startup": "none",
-  "auto_signature_help": true,
   "extend_comment_on_newline": false
 }
