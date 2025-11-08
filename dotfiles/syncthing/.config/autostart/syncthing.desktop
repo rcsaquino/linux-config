@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Syncthing
+Exec=syncthing
+Icon=syncthing
+Comment=Start Syncthing on login

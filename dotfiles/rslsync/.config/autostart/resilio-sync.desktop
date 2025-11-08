@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Resilio Sync
-Exec=rslsync
-Icon=resilio-sync
-Comment=Start Resilio Sync on login
