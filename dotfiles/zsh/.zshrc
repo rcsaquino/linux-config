@@ -14,7 +14,10 @@ eval "$(zoxide init zsh)"
 # FZF
 source <(fzf --zsh)
 
-# INSTALLED/DELETED PACKAGES
+# V
+alias v="/home/rcsaquino/gitfiles/v/v"
+
+# SEE INSTALLED/DELETED PACKAGES
 alias aqqe="comm -13 <(sort ~/factory_pkgs/factory_Qqet.txt) <(paru -Qqet | sort)"
 alias dqqe="comm -23 <(sort ~/factory_pkgs/factory_Qqet.txt) <(paru -Qqet | sort)"
 alias aqqet="comm -13 <(sort ~/factory_pkgs/factory_Qqe.txt) <(paru -Qqe | sort)"
@@ -29,12 +32,12 @@ alias zz="cd .."
 
 # ODIN HELPERS
 alias odin-tracker="cp ~/linux-config/scripts/odinlang/mem_tracker.odin ."
-odinb1() { odin build $@ -o:speed -out:release -vet -strict-style -obfuscate-source-code-locations }
-odinb1u() { odin build $@ -o:speed -out:release -vet -strict-style -obfuscate-source-code-locations -disable-assert -no-bounds-check }
-odinb2() { odin build $@ -o:aggressive -out:release -vet -strict-style -obfuscate-source-code-locations }
-odinb2u() { odin build $@ -o:aggressive -out:release -vet -strict-style -obfuscate-source-code-locations -disable-assert -no-bounds-check }
-odinb3() { odin build $@ -o:aggressive -out:release -vet -strict-style -obfuscate-source-code-locations -microarch:native }
-odinb3u() { odin build $@ -o:aggressive -out:release -vet -strict-style -obfuscate-source-code-locations -disable-assert -no-bounds-check -microarch:native }
+odinb1() { odin build $@ -o:speed -out:release -vet -strict-style -source-code-locations:obfuscated }
+odinb1u() { odin build $@ -o:speed -out:release -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check }
+odinb2() { odin build $@ -o:aggressive -out:release -vet -strict-style -source-code-locations:obfuscated }
+odinb2u() { odin build $@ -o:aggressive -out:release -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check }
+odinb3() { odin build $@ -o:aggressive -out:release -vet -strict-style -source-code-locations:obfuscated -microarch:native }
+odinb3u() { odin build $@ -o:aggressive -out:release -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check -microarch:native }
 
 # FUNCTIONS
 pdfpp() {
