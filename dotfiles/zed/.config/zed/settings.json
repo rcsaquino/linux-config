@@ -1,19 +1,23 @@
 {
+  "auto_update": false,
   "edit_predictions": {
-    "mode": "subtle"
+    "mode": "eager"
   },
   "agent": {
     "default_model": {
       "provider": "google",
-      "model": "gemini-2.5-flash-lite-preview"
+      "model": "gemini-2.5-flash"
     },
     "inline_assistant_model": {
       "provider": "google",
-      "model": "gemini-2.5-flash-lite-preview"
+      "model": "gemini-2.5-flash"
     },
     "model_parameters": []
   },
   "languages": {
+    "Zig": {
+      "show_edit_predictions": false
+    },
     "Odin": {
       "show_edit_predictions": true
     }
