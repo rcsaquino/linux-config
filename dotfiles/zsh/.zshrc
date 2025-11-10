@@ -28,7 +28,7 @@ alias zed="zeditor"
 alias zz="cd .."
 
 # ZIG
-alias zig-alloc="~/linux-config/scripts/zig/echo_template.sh"
+alias zigalloc="~/linux-config/scripts/zig/echo_template.sh"
 
 # ODIN
 alias odin-tracker="cp ~/linux-config/scripts/odin/mem_tracker.odin ."
