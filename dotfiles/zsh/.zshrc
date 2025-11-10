@@ -14,9 +14,6 @@ eval "$(zoxide init zsh)"
 # FZF
 source <(fzf --zsh)
 
-# V
-alias v="/home/rcsaquino/gitfiles/v/v"
-
 # SEE INSTALLED/DELETED PACKAGES
 alias aqqe="comm -13 <(sort ~/factory_pkgs/factory_Qqet.txt) <(paru -Qqet | sort)"
 alias dqqe="comm -23 <(sort ~/factory_pkgs/factory_Qqet.txt) <(paru -Qqet | sort)"
@@ -30,8 +27,11 @@ alias open="xdg-open"
 alias zed="zeditor"
 alias zz="cd .."
 
-# ODIN HELPERS
-alias odin-tracker="cp ~/linux-config/scripts/odinlang/mem_tracker.odin ."
+# ZIG
+alias zig-alloc="~/linux-config/scripts/zig/echo_template.sh"
+
+# ODIN
+alias odin-tracker="cp ~/linux-config/scripts/odin/mem_tracker.odin ."
 odinb1() { odin build $@ -o:speed -out:release -vet -strict-style -source-code-locations:obfuscated }
 odinb1u() { odin build $@ -o:speed -out:release -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check }
 odinb2() { odin build $@ -o:aggressive -out:release -vet -strict-style -source-code-locations:obfuscated }
