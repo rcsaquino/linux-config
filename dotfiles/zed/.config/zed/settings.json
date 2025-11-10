@@ -15,6 +15,9 @@
     "model_parameters": []
   },
   "languages": {
+    "V": {
+      "auto_indent": true
+    },
     "Zig": {
       "show_edit_predictions": false
     },
@@ -37,5 +40,11 @@
   "autosave": { "after_delay": { "milliseconds": 500 } },
   "terminal": { "toolbar": { "breadcrumbs": false } },
   "restore_on_startup": "none",
-  "extend_comment_on_newline": false
+  "extend_comment_on_newline": false,
+  "auto_signature_help": true,
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  }
 }
