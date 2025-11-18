@@ -4,6 +4,7 @@
     "mode": "eager"
   },
   "agent": {
+    "default_profile": "write",
     "default_model": {
       "provider": "google",
       "model": "gemini-2.5-flash"
@@ -19,7 +20,7 @@
       "auto_indent": true
     },
     "Zig": {
-      "show_edit_predictions": false
+      "show_edit_predictions": true
     },
     "Odin": {
       "show_edit_predictions": true

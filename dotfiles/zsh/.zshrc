@@ -31,7 +31,7 @@ alias zz="cd .."
 alias zigalloc="~/linux-config/scripts/zig/echo_template.sh"
 
 # ODIN
-alias odin-tracker="cp ~/linux-config/scripts/odin/mem_tracker.odin ."
+alias odin-tracker="cp ~/linux-config/assets/odin/mem_tracker.odin ."
 odinb1() { odin build $@ -o:speed -out:release -vet -strict-style -source-code-locations:obfuscated }
 odinb1u() { odin build $@ -o:speed -out:release -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check }
 odinb2() { odin build $@ -o:aggressive -out:release -vet -strict-style -source-code-locations:obfuscated }
