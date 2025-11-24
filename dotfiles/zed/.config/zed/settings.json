@@ -17,7 +17,7 @@
   },
   "languages": {
     "V": {
-      "show_edit_predictions": true,
+      "show_edit_predictions": false,
       "auto_indent": true,
       "formatter": {
         "external": {
@@ -27,10 +27,10 @@
       }
     },
     "Zig": {
-      "show_edit_predictions": true
+      "show_edit_predictions": false
     },
     "Odin": {
-      "show_edit_predictions": true
+      "show_edit_predictions": false
     }
   },
   "telemetry": {

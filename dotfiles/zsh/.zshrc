@@ -28,7 +28,8 @@ alias zed="zeditor"
 alias zz="cd .."
 
 # ZIG
-alias zigalloc="~/linux-config/scripts/zig/echo_template.sh"
+alias zig-allocator="cp ~/linux-config/assets/zig/zig-init-template/src/custom_allocator.zig ."
+alias zigi='cp -a ~/linux-config/assets/zig/zig-init-template/. . && sed -i "s/change_me/$(basename "$PWD")/g" build.zig && zig init -m 2>/dev/null'
 
 # ODIN
 alias odin-tracker="cp ~/linux-config/assets/odin/mem_tracker.odin ."
