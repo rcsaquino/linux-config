@@ -2,7 +2,8 @@ const std = @import("std");
 const builtin = @import("builtin");
 
 // =====================[  SETUP ALLOCATOR  ]=====================
-// const ca = @import("utils.zig").get_allocator(.Adaptive);
+// const utils = @import("utils.zig");
+// const ca = utils.get_allocator(.Adaptive);
 // const alloc = ca.allocator();
 // defer ca.deinit();
 // =========================[ END SETUP ]=========================
