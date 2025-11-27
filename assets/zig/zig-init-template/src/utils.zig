@@ -29,3 +29,13 @@ pub fn get_allocator(comptime a_kind: AllocatorKind) type {
         }
     };
 }
+
+// =====================[  PRINTER  ]=====================
+var stdout_buffer: [4096]u8 = undefined;
+var stdout_writer = std.fs.File.stdout().writer(&stdout_buffer);
+const stdout = &stdout_writer.interface;
+pub fn println(comptime fmt: []const u8, args: anytype, flush: bool) void {
+    stdout.print(fmt, args) catch @panic("Printing error!");
+    stdout.print("\n", .{}) catch @panic("Printing error!");
+    if (flush) stdout.flush() catch @panic("Printing error!");
+}
