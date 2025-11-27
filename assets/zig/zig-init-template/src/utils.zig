@@ -1,17 +1,16 @@
+const std = @import("std");
+const builtin = @import("builtin");
+
 // =====================[  SETUP ALLOCATOR  ]=====================
-// const ca = @import("custom_allocator.zig").init(.Adaptive);
+// const ca = @import("utils.zig").get_allocator(.Adaptive);
 // const alloc = ca.allocator();
 // defer ca.deinit();
 // =========================[ END SETUP ]=========================
-
-const std = @import("std");
-const mode = @import("builtin").mode;
-const is_debug = mode == .Debug or mode == .ReleaseSafe;
-
 const AllocatorKind = enum { Adaptive, Arena };
-
-pub fn init(comptime a_kind: AllocatorKind) type {
+pub fn get_allocator(comptime a_kind: AllocatorKind) type {
     return struct {
+        const is_debug = builtin.mode == .Debug or builtin.mode == .ReleaseSafe;
+
         var debug_allocator: std.heap.DebugAllocator(.{}) = .init;
         const base_allocator = if (is_debug) debug_allocator.allocator() else std.heap.smp_allocator;
         var arena = std.heap.ArenaAllocator.init(base_allocator);
