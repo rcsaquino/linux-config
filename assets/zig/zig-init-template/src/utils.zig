@@ -30,7 +30,10 @@ pub fn get_allocator(comptime a_kind: AllocatorKind) type {
     };
 }
 
-// =====================[  PRINTER  ]=====================
+// =====================[  SETUP PRINTER  ]=====================
+// const utils = @import("utils.zig");
+// const println = utils.println;
+// =========================[ END SETUP ]=========================
 var stdout_buffer: [4096]u8 = undefined;
 var stdout_writer = std.fs.File.stdout().writer(&stdout_buffer);
 const stdout = &stdout_writer.interface;
