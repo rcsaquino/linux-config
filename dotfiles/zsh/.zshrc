@@ -35,12 +35,10 @@ alias zigb="zig build -Doptimize=ReleaseFast"
 
 # ODIN
 alias odin-tracker="cp ~/linux-config/assets/odin/mem_tracker.odin ."
-odinb1() { odin build $@ -o:speed -out:release -vet -strict-style -source-code-locations:obfuscated }
-odinb1u() { odin build $@ -o:speed -out:release -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check }
-odinb2() { odin build $@ -o:aggressive -out:release -vet -strict-style -source-code-locations:obfuscated }
-odinb2u() { odin build $@ -o:aggressive -out:release -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check }
-odinb3() { odin build $@ -o:aggressive -out:release -vet -strict-style -source-code-locations:obfuscated -microarch:native }
-odinb3u() { odin build $@ -o:aggressive -out:release -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check -microarch:native }
+odin-sizesafe() { odin build $@ -o:speed -out:release -vet -strict-style -source-code-locations:obfuscated }
+odin-size() { odin build $@ -o:speed -out:release -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check }
+odin-fastsafe() { odin build $@ -o:aggressive -out:release -vet -strict-style -source-code-locations:obfuscated }
+odin-fast() { odin build $@ -o:aggressive -out:release -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check }
 
 # FUNCTIONS
 pdfpp() {
