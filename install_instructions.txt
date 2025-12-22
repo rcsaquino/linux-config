@@ -1,0 +1,34 @@
+# SAVE FACTORY PACKAGES
+mkdir ~/factory_pkgs
+cd ~/factory_pkgs
+pacman -Qqe > factory_Qqe.txt
+pacman -Qqet > factory_Qqet.txt
+
+# UPDATE SYSTEM
+sudo pacman -Syu
+
+# SETUP PARU
+sudo pacman -S --needed base-devel
+sudo pacman -S git
+git clone https://aur.archlinux.org/paru-bin.git
+cd paru-bin
+makepkg -si
+paru
+
+# SETUP V
+mkdir ~/apps
+cd ~/apps
+git clone https://github.com/vlang/v.git
+cd v
+make
+sudo ./v symlink
+
+# SETUP DOTFILES
+mkdir ~/gitfiles
+cd ~/gitfiles
+git clone https://github.com/rcsaquino/dotf.git
+cd dotf
+v -prod -prealloc -gc none .
+
+# INSTALL OTHER STUFF
+paru -S zsh oh-my-zsh zoxide zed zen-browser-bin
