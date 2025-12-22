@@ -5,16 +5,15 @@
     "mode": "eager"
   },
   "agent": {
-    "default_profile": "write",
-    "default_model": {
-      "provider": "google",
-      "model": "gemini-2.5-flash"
-    },
     "inline_assistant_model": {
       "provider": "google",
       "model": "gemini-2.5-flash"
     },
-    "model_parameters": []
+    "default_profile": "write",
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-2.5-flash"
+    }
   },
   "languages": {
     "Rust": {
