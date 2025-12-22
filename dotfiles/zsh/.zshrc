@@ -21,7 +21,7 @@ alias aqqet="comm -13 <(sort ~/factory_pkgs/factory_Qqe.txt) <(paru -Qqe | sort)
 alias dqqet="comm -23 <(sort ~/factory_pkgs/factory_Qqe.txt) <(paru -Qqe | sort)"
 
 # QOL ALIASES
-alias dotf="~/linux-config/install.sh"
+alias dotf="~/gitfiles/dotf/dotf"
 alias la="ls -A"
 alias open="xdg-open"
 alias zed="zeditor"
