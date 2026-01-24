@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Enable Noisetorch
-Comment=Enables noisetorch's virtual microphone 
-Exec=noisetorch -i
+Comment=Enables noisetorch's virtual microphone
+Exec=noisetorch -i alsa_input.usb-Razer_Inc_Razer_Seiren_Mini_UC2214L03209409-00.mono-fallback
 StartupNotify=false
 Terminal=false

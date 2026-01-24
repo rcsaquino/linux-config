@@ -28,7 +28,7 @@ alias zed="zeditor"
 alias zz="cd .."
 
 # ZIG
-alias zig-utils="cp ~/linux-config/assets/zig/zig-init-template/src/utils.zig ."
+alias zig-utils="cp ~/linux-config/assets/zig/utils.zig ."
 alias zigi="cp -a ~/linux-config/assets/zig/zig-init-template/. . && sed -i "s/change_me/$(basename "$PWD")/g" build.zig && zig init -m 2>/dev/null"
 alias zigr="zig build run --"
 alias zigb="zig build -Doptimize=ReleaseFast"

@@ -2,22 +2,22 @@
   "show_edit_predictions": true,
   "auto_update": false,
   "edit_predictions": {
-    "mode": "eager"
+    "mode": "eager",
   },
   "agent": {
     "inline_assistant_model": {
       "provider": "google",
-      "model": "gemini-2.5-flash"
+      "model": "gemini-3-flash-preview",
     },
     "default_profile": "write",
     "default_model": {
       "provider": "google",
-      "model": "gemini-2.5-flash"
-    }
+      "model": "gemini-3-flash-preview",
+    },
   },
   "languages": {
     "Rust": {
-      "show_edit_predictions": false
+      "show_edit_predictions": false,
     },
     "V": {
       "show_edit_predictions": false,
@@ -25,30 +25,30 @@
       "formatter": {
         "external": {
           "command": "v",
-          "arguments": ["fmt"]
-        }
-      }
+          "arguments": ["fmt"],
+        },
+      },
     },
     "Zig": {
-      "show_edit_predictions": false
+      "show_edit_predictions": false,
     },
     "Odin": {
-      "show_edit_predictions": false
-    }
+      "show_edit_predictions": false,
+    },
   },
   "telemetry": {
     "metrics": false,
-    "diagnostics": false
+    "diagnostics": false,
   },
   "buffer_font_size": 16.0,
   "autosave": { "after_delay": { "milliseconds": 500 } },
   "terminal": { "toolbar": { "breadcrumbs": false } },
-  "restore_on_startup": "none",
+  "restore_on_startup": "empty_tab",
   "extend_comment_on_newline": false,
   "auto_signature_help": true,
   "diagnostics": {
     "inline": {
-      "enabled": true
-    }
-  }
+      "enabled": true,
+    },
+  },
 }
