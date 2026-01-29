@@ -1,4 +1,7 @@
 {
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "show_edit_predictions": true,
   "auto_update": false,
   "edit_predictions": {
@@ -16,6 +19,9 @@
     },
   },
   "languages": {
+    "Kdl": {
+      "show_edit_predictions": false
+    },
     "Rust": {
       "show_edit_predictions": false,
     },
