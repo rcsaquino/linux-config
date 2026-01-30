@@ -13,7 +13,7 @@ layout {
     
     focus-ring {
         on
-        width 4
+        width 2
     }
 
     border {
@@ -36,6 +36,10 @@ layout {
         gaps-between-tabs 4
         corner-radius 12
         width 4
+    }
+    struts {
+        top -8
+        bottom -4
     }
 }
 
