@@ -42,9 +42,9 @@ hotkey-overlay {
     skip-at-startup
 }
 
-// debug {
-//     honor-xdg-activation-with-invalid-serial
-// }
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
 
 // Custom
 include "niri/animations.kdl"
@@ -56,6 +56,7 @@ include "dms/colors.kdl"
 include "dms/binds.kdl"
 include "dms/outputs.kdl"
 include "dms/cursor.kdl"
+include "dms/windowrules.kdl"
 // include "dms/layout.kdl"
 // include "dms/alttab.kdl"
 // include "dms/wpblur.kdl"
