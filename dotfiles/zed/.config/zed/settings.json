@@ -1,7 +1,5 @@
 {
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
+  "theme": "Catppuccin Mocha",
   "show_edit_predictions": true,
   "auto_update": false,
   "edit_predictions": {
@@ -19,15 +17,11 @@
     },
   },
   "languages": {
-    "Kdl": {
-      "show_edit_predictions": false
-    },
     "Rust": {
       "show_edit_predictions": false,
     },
     "V": {
       "show_edit_predictions": false,
-      "auto_indent": true,
       "formatter": {
         "external": {
           "command": "v",
