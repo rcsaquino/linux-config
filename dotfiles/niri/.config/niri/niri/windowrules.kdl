@@ -1,0 +1,9 @@
+window-rule {
+    draw-border-with-background false
+    opacity 0.85
+}
+
+window-rule {
+    match title=".*(?i)(youtube|netflix|twitch).*"
+    opacity 1.0
+}

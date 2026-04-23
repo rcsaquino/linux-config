@@ -50,6 +50,7 @@ debug {
 include "niri/animations.kdl"
 include "niri/binds.kdl"
 include "niri/layout.kdl"
+include "niri/windowrules.kdl"
 
 // DMS
 include "dms/colors.kdl"

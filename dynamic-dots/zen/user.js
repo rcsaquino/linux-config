@@ -32,7 +32,11 @@ user_pref("network.trr.custom_uri", "https://dns.quad9.net/dns-query");
 user_pref("network.trr.mode", 2);
 user_pref("network.trr.uri", "https://dns.quad9.net/dns-query");
 
-// Others
+// --- CUSTOM --- //
+
+// Theme
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+
+// Animations
 // user_pref("full-screen-api.transition-duration.enter", "150 150");
 // user_pref("full-screen-api.transition-duration.leave", "150 150");
-user_pref(toolkit.legacyUserProfileCustomizations.stylesheets, true);
