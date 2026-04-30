@@ -1,4 +1,16 @@
 {
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "theme": "Catppuccin Mocha",
   "show_edit_predictions": true,
   "auto_update": false,
@@ -6,6 +18,7 @@
     "mode": "eager",
   },
   "agent": {
+    "dock": "right",
     "inline_assistant_model": {
       "provider": "google",
       "model": "gemini-3-flash-preview",
