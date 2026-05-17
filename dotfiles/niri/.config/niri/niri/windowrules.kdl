@@ -4,3 +4,7 @@ window-rule {
     draw-border-with-background false
     opacity 0.95
 }
+
+window-rule {
+    open-floating false
+}
