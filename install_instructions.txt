@@ -31,4 +31,4 @@ cd dotf
 v -prod -prealloc -gc none .
 
 # INSTALL OTHER STUFF
-paru -S zsh oh-my-zsh zoxide zed zen-browser-bin
+paru -S zsh oh-my-zsh zoxide zed
