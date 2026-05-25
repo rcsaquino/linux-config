@@ -21,7 +21,6 @@ alias aqqet="comm -13 <(sort ~/factory_pkgs/factory_Qqe.txt) <(paru -Qqe | sort)
 alias dqqet="comm -23 <(sort ~/factory_pkgs/factory_Qqe.txt) <(paru -Qqe | sort)"
 
 # QOL ALIASES
-alias dotf="~/gitfiles/dotf/dotf"
 alias la="ls -A"
 alias open="xdg-open"
 alias zed="zeditor"
@@ -35,10 +34,10 @@ alias zigb="zig build -Doptimize=ReleaseFast"
 
 # ODIN
 alias odin-tracker="cp ~/linux-config/assets/odin/mem_tracker.odin ."
-odin-sizesafe() { odin build $@ -o:speed -out:release -vet -strict-style -source-code-locations:obfuscated }
-odin-size() { odin build $@ -o:speed -out:release -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check }
-odin-fastsafe() { odin build $@ -o:aggressive -out:release -vet -strict-style -source-code-locations:obfuscated }
-odin-fast() { odin build $@ -o:aggressive -out:release -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check }
+alias odinb-sizesafe="odin build . -o:speed -vet -strict-style -source-code-locations:obfuscated"
+alias odinb-size="odin build . -o:speed -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check"
+alias odinb-fastsafe="odin build . -o:aggressive -vet -strict-style -source-code-locations:obfuscated"
+alias odinb-fast="odin build . -o:aggressive -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check"
 
 # FUNCTIONS
 pdfpp() {
