@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=Syncthing
-Type=Application
-Exec=syncthing serve --no-browser --logfile=default
-Icon=syncthing
-Comment=Start syncthing on login
