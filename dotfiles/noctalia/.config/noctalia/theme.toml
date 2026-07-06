@@ -1,8 +1,0 @@
-[theme]
-mode = "dark"
-source = "custom"
-custom_palette = "cattpuccin-mocha-blue"
-
-[theme.templates]
-builtin_ids = [ "gtk3", "gtk4", "niri", "qt", "ghostty" ]
-community_ids = [ "pi-agent", "zed", "discord", "steam", "telegram", "yazi" ]
