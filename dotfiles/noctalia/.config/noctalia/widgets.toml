@@ -1,7 +1,6 @@
 [desktop_widgets]
 enabled = false
 
-
 # START
 [widget.launcher]
 custom_image = "/usr/share/noctalia/assets/images/distros/arch.svg"
@@ -18,7 +17,6 @@ title_scroll = "on_hover"
 # CENTER
 [widget.clock]
 format = "{:%a %d %b | %H:%M}"
-
 
 # END
 [widget.tray]
