@@ -9,5 +9,5 @@ window-rule {
 }
 
 window-rule {
-    open-floating false
+    // open-floating false
 }

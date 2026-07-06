@@ -1,0 +1,8 @@
+[theme]
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-tonal-spot"
+
+[theme.templates]
+builtin_ids = [ "gtk3", "gtk4", "niri", "qt", "ghostty" ]
+community_ids = [ "pi-agent", "zed", "discord", "steam", "telegram", "yazi" ]

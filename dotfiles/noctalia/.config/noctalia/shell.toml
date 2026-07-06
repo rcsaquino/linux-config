@@ -1,0 +1,12 @@
+[shell]
+polkit_agent = true
+
+[shell.greeter_sync]
+auto_sync = true
+
+[shell.panel]
+transparency_mode = "glass"
+wallpaper_placement = "floating"
+control_center_placement = "floating"
+session_placement = "floating"
+session_position = "center"

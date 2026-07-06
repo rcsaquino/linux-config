@@ -1,0 +1,39 @@
+[desktop_widgets]
+enabled = false
+
+[widget.battery]
+hide_when_plugged = true
+
+[widget.clock]
+format = "{:%a %d %b | %H:%M}"
+
+[widget.cpu]
+show_label = false
+
+[widget.launcher]
+custom_image = "/usr/share/noctalia/assets/images/distros/arch.svg"
+custom_image_colorize = true
+
+[widget.media]
+hide_when_no_media = true
+title_scroll = "on_hover"
+
+[widget.network]
+show_label = false
+
+[widget.notifications]
+hide_when_no_unread = true
+
+[widget.ram]
+show_label = false
+
+[widget.tray]
+detached_panel = true
+drawer = true
+
+[widget.volume]
+show_label = false
+
+[widget.workspaces]
+display = "none"
+pill_scale = 0.7

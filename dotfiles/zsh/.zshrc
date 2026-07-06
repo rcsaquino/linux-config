@@ -1,3 +1,6 @@
+# SYSTEM
+PATH=/home/rcsaquino/.local/bin:$PATH
+
 # ZSH THEME
 export ZSH="/usr/share/oh-my-zsh"
 ZSH_THEME="robbyrussell"
@@ -13,6 +16,12 @@ eval "$(zoxide init zsh)"
 
 # FZF
 source <(fzf --zsh)
+
+# NVM
+source /usr/share/nvm/init-nvm.sh
+
+# POMO
+alias pomo="~/apps/pomo/pomo"
 
 # SEE INSTALLED/DELETED PACKAGES
 alias aqqe="comm -13 <(sort ~/factory_pkgs/factory_Qqet.txt) <(paru -Qqet | sort)"
