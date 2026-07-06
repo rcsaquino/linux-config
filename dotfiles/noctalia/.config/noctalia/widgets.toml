@@ -43,13 +43,3 @@ show_label = false
 
 [widget.battery]
 hide_when_plugged = true
-
-
-
-
-
-
-
-
-
-
