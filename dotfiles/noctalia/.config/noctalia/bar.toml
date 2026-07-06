@@ -8,7 +8,6 @@ shadow = false
 capsule = true
 capsule_padding = 12
 capsule_opacity = 0.95
-
 start = [ "launcher", "workspaces", "media"]
-
+center = ["clock"]
 end = [ "tray", "cpu", "temp", "ram", "notifications", "volume", "bluetooth", "network", "battery", "session" ]
