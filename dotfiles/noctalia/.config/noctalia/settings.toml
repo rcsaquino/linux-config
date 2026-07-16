@@ -11,7 +11,7 @@ capsule_padding = 12
 capsule_opacity = 0.95
 start = [ "launcher", "workspaces", "media"]
 center = ["clock"]
-end = [ "tray", "cpu", "temp", "ram", "notifications", "volume", "bluetooth", "network", "battery", "session" ]
+end = [ "tray", "cpu", "ram", "notifications", "volume", "bluetooth", "network", "battery", "session" ]
 
 [battery]
 warning_threshold = 20
@@ -93,9 +93,6 @@ drawer = true
 [widget.cpu]
 show_label = false
 
-[widget.temp]
-show_label = false
-
 [widget.ram]
 show_label = false
 
@@ -107,6 +104,3 @@ show_label = false
 
 [widget.network]
 show_label = false
-
-[widget.battery]
-hide_when_plugged = true

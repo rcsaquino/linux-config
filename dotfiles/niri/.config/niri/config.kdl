@@ -50,10 +50,8 @@ debug {
 include "niri/animations.kdl"
 include "niri/binds.kdl"
 include "niri/layout.kdl"
+include "niri/outputs.kdl"
 include "niri/windowrules.kdl"
 
 // Noctalia
-include "noctalia/layerrules.kdl"
-include "noctalia/windowrules.kdl"
-include "noctalia/binds.kdl"
-spawn-at-startup "noctalia"
+include "noctalia.kdl"

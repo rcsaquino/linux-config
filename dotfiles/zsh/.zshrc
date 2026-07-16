@@ -20,9 +20,6 @@ source <(fzf --zsh)
 # NVM
 source /usr/share/nvm/init-nvm.sh
 
-# POMO
-alias pomo="~/apps/pomo/pomo"
-
 # SEE INSTALLED/DELETED PACKAGES
 alias aqqe="comm -13 <(sort ~/factory_pkgs/factory_Qqet.txt) <(paru -Qqet | sort)"
 alias dqqe="comm -23 <(sort ~/factory_pkgs/factory_Qqet.txt) <(paru -Qqet | sort)"

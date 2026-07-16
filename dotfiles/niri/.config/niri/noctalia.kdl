@@ -1,0 +1,7 @@
+include "noctalia/binds.kdl"
+include "noctalia/layerrules.kdl"
+include "noctalia/layout.kdl"
+include "noctalia/recentwindows.kdl"
+include "noctalia/windowrules.kdl"
+
+spawn-at-startup "noctalia"
