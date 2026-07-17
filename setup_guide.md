@@ -32,6 +32,18 @@ cd ~
 git clone https://github.com/rcsaquino/linux-config.git
 ```
 
+## Setup Dotfiles
+```bash
+paru -S odin
+mkdir ~/gitfiles
+cd ~/gitfiles
+git clone https://github.com/rcsaquino/dotf.git
+cd dotf
+odin build . -out:dotf -o:speed
+sudo ln -s ~/gitfiles/dotf/dotf /usr/local/bin/dotf
+dotf
+```
+
 ## Setup ZSH
 ```bash
 paru -S zsh oh-my-zsh-git zsh-autosuggestions-git zsh-completions-git zsh-syntax-highlighting
@@ -39,16 +51,5 @@ paru -S zsh oh-my-zsh-git zsh-autosuggestions-git zsh-completions-git zsh-syntax
 
 ## Install Applications
 ```bash
-paru -S alacritty odin zoxide zed
-```
-
-## Setup and Link Dotfiles
-```bash
-mkdir ~/gitfiles
-cd ~/gitfiles
-git clone https://github.com/rcsaquino/dotf.git
-cd dotf
-odin build . -out:dotf -o:speed
-sudo ln -s ~/gitfiles/dotf/dotf /usr/local/bin/dotf
-dotf link alacritty zsh zed
+paru -S alacritty zoxide zed
 ```
