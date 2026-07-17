@@ -18,8 +18,10 @@ sudo pacman -Syu
 ## Setup Paru (AUR Helper)
 ```bash
 sudo pacman -S --needed base-devel git
-git clone https://aur.archlinux.org/paru-bin.git
-cd paru-bin
+sudo pacman -S rustup
+rustup toolchain install stable
+git clone https://aur.archlinux.org/paru.git
+cd paru
 makepkg -si
 paru
 ```
@@ -30,9 +32,14 @@ cd ~
 git clone https://github.com/rcsaquino/linux-config.git
 ```
 
+## Setup ZSH
+```bash
+paru -S zsh oh-my-zsh-git zsh-autosuggestions-git zsh-completions-git zsh-syntax-highlighting
+```
+
 ## Install Applications
 ```bash
-paru -S zsh odin oh-my-zsh zoxide zed
+paru -S alacritty odin zoxide zed
 ```
 
 ## Setup and Link Dotfiles
@@ -42,7 +49,6 @@ cd ~/gitfiles
 git clone https://github.com/rcsaquino/dotf.git
 cd dotf
 odin build . -out:dotf -o:speed
-mkdir -p ~/.local/bin
 sudo ln -s ~/gitfiles/dotf/dotf /usr/local/bin/dotf
-dotf link zsh zed
+dotf link alacritty zsh zed
 ```
