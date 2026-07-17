@@ -54,4 +54,10 @@ include "niri/outputs.kdl"
 include "niri/windowrules.kdl"
 
 // Noctalia
+include "noctalia/binds.kdl"
+include "noctalia/layerrules.kdl"
+include "noctalia/windowrules.kdl"
+
+spawn-at-startup "noctalia"
+
 include "noctalia.kdl"

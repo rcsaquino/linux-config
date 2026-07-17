@@ -32,7 +32,7 @@
     },
     "default_profile": "write",
     "default_model": {
-      "effort": "xhigh",
+      "effort": "max",
       "enable_thinking": true,
       "provider": "opencode",
       "model": "go/deepseek-v4-flash",

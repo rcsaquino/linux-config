@@ -149,9 +149,8 @@ binds {
     // ==========================================
     //  Applications
     // ==========================================
-    Super+T hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
+    Super+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
     Super+B hotkey-overlay-title="Open Browser" { spawn "google-chrome-stable"; }
-    Super+Y hotkey-overlay-title="Open File Manager" { spawn-sh "ghostty -e yazi"; }
 }
 
 // ==========================================

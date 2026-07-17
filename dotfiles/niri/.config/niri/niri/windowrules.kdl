@@ -1,6 +1,6 @@
 window-rule {
     match app-id="dev.zed.Zed"
-    match app-id="com.mitchellh.ghostty"
+    match app-id="^Alacritty$"
     draw-border-with-background false
     opacity 0.80
     background-effect {
