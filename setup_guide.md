@@ -26,22 +26,24 @@ makepkg -si
 paru
 ```
 
-## Setup Linux Config
+## Install Applications
 ```bash
-cd ~
-git clone https://github.com/rcsaquino/linux-config.git
+paru -S alacritty fzf nvm odin vim zed zoxide
 ```
 
-## Setup Dotfiles
+## Setup NVIDIA
+1. Install `paru -S nvidia-open nvidia-utils nvidia-settings` (Do this during archinstall if possible)
+2. Edit `sudo vim /etc/mkinitcpio.conf`
+3. Add `nvidia nvidia_modeset nvidia_uvm nvidia_drm` to `MODULES`
+4. Delete `kms` from `HOOKS`
+5. Run `sudo mkinitcpio -P`
+6. Edit `sudo vim /etc/kernel/cmdline`
+7. Add `nvidia_drm.modeset=1` and `nvidia_drm.fbdev=1` to the end of the line
+8. Reboot
+
+## Setup Niri + Noctalia
 ```bash
-paru -S odin
-mkdir ~/gitfiles
-cd ~/gitfiles
-git clone https://github.com/rcsaquino/dotf.git
-cd dotf
-odin build . -out:dotf -o:speed
-sudo ln -s ~/gitfiles/dotf/dotf /usr/local/bin/dotf
-dotf
+paru -S niri noctalia noctalia-greeter greetd dbus polkit gnome-keyring
 ```
 
 ## Setup ZSH
@@ -49,7 +51,15 @@ dotf
 paru -S zsh oh-my-zsh-git zsh-autosuggestions-git zsh-completions-git zsh-syntax-highlighting
 ```
 
-## Install Applications
+## Setup Dotfiles
 ```bash
-paru -S alacritty zoxide zed
+cd ~
+git clone https://github.com/rcsaquino/linux-config.git
+mkdir gitfiles
+cd gitfiles
+git clone https://github.com/rcsaquino/dotf.git
+cd dotf
+odin build . -out:dotf -o:speed
+sudo ln -s ~/gitfiles/dotf/dotf /usr/local/bin/dotf
+dotf link alacritty niri noctalia paru zed zsh
 ```
